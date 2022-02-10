@@ -12,10 +12,12 @@ const tutorials = [
 ];
 
 const titleCased = () => {
+
   return tutorials.map((element) => {
-    const splitedWord = element.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+    const splitedWord = element.split(' ');
+    const capFirstLetter = splitedWord.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
     
-    return splitedWord.join(' ');
+    return capFirstLetter.join(' ');
   });
 }
-titleCased();
+console.log(titleCased());
